@@ -1,0 +1,59 @@
+<html>
+<body>
+  <button onclick="func1()">pop</button>
+    <button onclick="func2()">push</button>
+    <button onclick="func3()">Shift</button>
+    <button onclick="func4()">unshift</button>
+   <button onclick="func5()">length</button>
+   <button onclick="func6()">delete</button>
+   <button onclick="func7()">splice</button>
+
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <script>
+    var subjects=["os","cn","oose","full stack"];
+    document.getElementById("demo1").innerHTML=subjects;
+    function func1(){
+      subjects.pop();
+      document.getElementById("demo2").innerHTML=subjects;
+    }
+      function func2(){
+      subjects.push("csa");
+      document.getElementById("demo3").innerHTML=subjects;
+      }
+      function func3(){
+      subjects.shift();
+      document.getElementById("demo4").innerHTML=subjects;
+    }
+    function func4(){
+      subjects.unshift("java");
+      document.getElementById("demo5").innerHTML=subjects;
+}
+function func5(){
+  document.getElementById("demo6").innerHTML=subjects.length;
+}
+function func6(){
+  document.getElementById("demo7").innerHTML=subjects;
+  delete subjects[0];
+  document.getElementById("demo8").innerHTML=subjects;
+}
+function func7(){
+  document.getElementById("demo9").innerHTML=subjects;
+  var x=subjects.splice(2,0,"cp","c++");
+  document.getElementById("demo10").innerHTML=subjects;
+  var x=subjects.splice(2,4,"c","oops");
+  document.getElementById("demo11").innerHTML=subjects;
+}
+
+    </script>
+</body>
+</html>
