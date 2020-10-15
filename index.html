@@ -7,6 +7,8 @@
    <button onclick="func5()">length</button>
    <button onclick="func6()">delete</button>
    <button onclick="func7()">splice</button>
+   <button onclick="func8()">sort reverse</button>
+
 
   <p id="demo1"></p>
   <p id="demo2"></p>
@@ -19,6 +21,8 @@
   <p id="demo9"></p>
   <p id="demo10"></p>
   <p id="demo11"></p>
+  <p id="demo12"></p>
+  <p id="demo13"></p>
   <script>
     var subjects=["os","cn","oose","full stack"];
     document.getElementById("demo1").innerHTML=subjects;
@@ -52,6 +56,13 @@ function func7(){
   document.getElementById("demo10").innerHTML=subjects;
   var x=subjects.splice(2,4,"c","oops");
   document.getElementById("demo11").innerHTML=subjects;
+}
+function func8(){
+  subjects.sort();
+  document.getElementById("demo12").innerHTML=subjects;
+  subjects.reverse();
+  document.getElementById("demo13").innerHTML=subjects;
+
 }
 
     </script>
