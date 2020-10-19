@@ -1,0 +1,87 @@
+<html>
+<body>
+  <!-- onkeydown -->
+<p> triggered when user is pressing a key in input field</p>
+<input type="text" onkeydown="myFunc()">
+    <script>
+    function myFunc(){
+      alert("pressed a key inside the input field");
+    }
+    </script>
+<!-- ondblclick -->
+<!-- <input type="text" ondblclick="myFunc1()"> -->
+    <p ondblclick="myFunc1()">double click to trigger a function.</p>
+    <p id="demo"></p>
+    <script>
+    function myFunc1(){
+      document.getElementById("demo").innerHTML="Hello World";
+    }
+    </script>
+
+<!-- onchange -->
+<p> Select car from the list</p>
+<select id="mySelect" onchange="myFunc2()">
+  <option value="Audi">Audi
+<option value="BMW">BMW
+  </select>
+  <p id="demo2"></p>
+  <script>
+    function myFunc2(){
+      var x=document.getElementById("mySelect").value;
+      document.getElementById("demo2").innerHTML="You selected:"+x;
+    }
+    </script>
+    <!-- onmouseup and onmousedown -->
+    <p id="demo3" onmousedown="mouseDown()" onmouseup="mouseUp()">
+      click the text</p>
+      <script>
+        function mouseDown(){
+        document.getElementById("demo3").style.color="red";
+        }
+        function mouseUp(){
+        document.getElementById("demo3").style.color="green";
+        }
+        </script>
+
+        <!-- onselect -->
+        Select Some Text : <input type="text" value="Hello world!!" onselect="myFunc3()">
+        <script>
+          function myFunc3(){
+            alert("you selected some text");
+          }
+          </script>
+          <br>
+          <br>
+          <form action="#" onsubmit="myFunc4()">
+            Enter name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+            </form>
+            <script>
+              function myFunc4(){
+                alert("The form was submitted");
+              }
+            </script>
+            <!-- onreset -->
+            <form onreset="myFunc5()">
+              Enter name: <input type="text">
+              <input type="reset">
+              </form>
+              <script>
+                function myFunc5(){
+                  alert("form was reset");
+                }
+            </script>
+            <!-- onfocus and onblur -->
+            Enter your name: <input type="text"
+             onfocus="myFunc6(this)" onblur="myFunc7(this)">
+             <script>
+             function myFunc6(x) {
+             x.style.background = "yellow";
+             }
+            function myFunc7(x) {
+            x.style.background = "grey";
+            }
+</script>
+
+  </body>
+</html>
