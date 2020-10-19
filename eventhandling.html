@@ -81,7 +81,20 @@
             function myFunc7(x) {
             x.style.background = "grey";
             }
-</script>
+        </script>
+        <!-- onload -->
+        <body onload="myFunction()">
+          <h1>Hello World!</h1>
+        <script>
+           function myFunction()
+              {
+             alert("Page is loaded");
+             }
+           </script>
+           <!-- onclick -->
+           <p id="demo5"></p>
+           <button onclick="document.getElementById('demo5').innerHTML=Date()">
+             Click to check time</button>
 
   </body>
 </html>
