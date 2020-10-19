@@ -40,8 +40,34 @@
             document.getElementById("demo4").innerHTML=pos;
             </script>
             <script>
-              var str="Apple, Banana, Kiwi ";
+              var str="Apple, Banana, Kiwi";
                var pos=str.substr(7,8);
               document.getElementById("demo5").innerHTML=pos;
               </script>
-            
+              <script>
+              // it is case sensitive
+                var str="Please visit Microsoft";
+                 var n=str.replace("Microsoft","Google");
+                document.getElementById("demo6").innerHTML=n;
+                </script>
+               <script>
+                  var str="Please visit Microsoft";
+                   var n=str.toUpperCase();
+                  document.getElementById("demo7").innerHTML=n;
+                  </script>
+                <script>
+                    var str="Please visit Microsoft";
+                    var str2="Please visit Google";
+                    var n=str.concat(" ",str2);
+                    document.getElementById("demo8").innerHTML=n;
+                    </script>
+                <script>
+                  var str="Please visit Microsoft";
+                  var n=str.charAt(0);
+                    document.getElementById("demo9").innerHTML=n;
+                </script>
+                <script>
+                  var str="Please visit Microsoft";
+                  var n=str.charCodeAt(0);
+                    document.getElementById("demo10").innerHTML=n;
+                </script>
