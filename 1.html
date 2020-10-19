@@ -1,0 +1,47 @@
+<html>
+<body>
+  <p id="demo"></p>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <script>
+    var txt="dfghjkfghj";
+     var slen=txt.length;
+    document.getElementById("demo").innerHTML=slen;
+    </script>
+    <script>
+      var str="please locate where locate ";
+       var pos=str.indexOf("locate");
+      document.getElementById("demo1").innerHTML=pos;
+      </script>
+      <!-- return -1 if text not found
+        (indexOf and lastIndexOf)-->
+      <script>
+        var str="please locate where ;;;locate ";
+         var pos=str.lastIndexOf("locate");
+        document.getElementById("demo2").innerHTML=pos;
+        </script>
+        <script>
+          var str="please locate where locate occurs ";
+           var pos=str.search("locate");
+          document.getElementById("demo3").innerHTML=pos;
+          </script>
+          <script>
+            var str="Apple, Banana, Kiwi ";
+             var pos=str.slice(7,13);
+            document.getElementById("demo4").innerHTML=pos;
+            </script>
+            <script>
+              var str="Apple, Banana, Kiwi ";
+               var pos=str.substr(7,8);
+              document.getElementById("demo5").innerHTML=pos;
+              </script>
+            

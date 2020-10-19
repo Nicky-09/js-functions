@@ -8,7 +8,11 @@
    <button onclick="func6()">delete</button>
    <button onclick="func7()">splice</button>
    <button onclick="func8()">sort reverse</button>
-
+     <button onclick="func9()">concat</button>
+     <button onclick="func10()">join</button>
+     <button onclick="func11()">to string</button>
+     <button onclick="func12()">slice</button>
+     <button onclick="func13()">concat</button>
 
   <p id="demo1"></p>
   <p id="demo2"></p>
@@ -23,8 +27,17 @@
   <p id="demo11"></p>
   <p id="demo12"></p>
   <p id="demo13"></p>
+  <p id="demo14"></p>
+  <p id="demo15"></p>
+  <p id="demo16"></p>
+  <p id="demo17"></p>
+  <p id="demo18"></p>
+  <p id="demo19"></p>
+  <p id="demo20"></p>
   <script>
     var subjects=["os","cn","oose","full stack"];
+    var subject=["a","b","c"];
+    var sub=["d","e","f"];
     document.getElementById("demo1").innerHTML=subjects;
     function func1(){
       subjects.pop();
@@ -64,6 +77,26 @@ function func8(){
   document.getElementById("demo13").innerHTML=subjects;
 
 }
+function func9(){
+  var x=subjects.concat(subject);
+  document.getElementById("demo14").innerHTML=x;
+  var z=x.concat(sub);
+  document.getElementById("demo15").innerHTML=z;
+}
+function func10(){
+  var x=subjects.join("&");
+  document.getElementById("demo16").innerHTML=x;
+}
+function func11(){
+  var x=subjects.toString();
+  document.getElementById("demo17").innerHTML=x;
+}
+function func12(){
+  var x=subjects.slice(2);
+  document.getElementById("demo18").innerHTML=x;
+}
+
+
 
     </script>
 </body>
