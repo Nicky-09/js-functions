@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- case insensitive search   -->
+<p id="demo"></p>
+<script>
+var str = "Visit the university!";
+var n = str.search(/visit/i);
+document.getElementById("demo").innerHTML = n;
+</script>
+<!-- global search -->
+<button onclick="myFunc1()">global</button>
+<p id="demo2"></p>
+<script>
+  function myFunc1(){
+var str = "Is this all there is?";
+var patt1 =/is/gi;
+var result=str.match(patt1);
+document.getElementById("demo2").innerHTML = result;
+}
+</script>
+<!-- multiline  case-insensitive and global search-->
+<button onclick="myFunc2()">multiline</button>
+<p id="demo3"></p>
+<script>
+  function myFunc2(){
+var str = "Is th\nis all \nthere \nis\n?";
+var patt1 =/^is/mig;
+var result=str.match(patt1);
+document.getElementById("demo3").innerHTML = result;
+}
+</script>
+<!-- particular character -->
+<button onclick="myFunc3()">character</button>
+<p id="demo4"></p>
+<script>
+  function myFunc3(){
+var str = "Is this all there is?";
+var patt1 =/[i]/g;
+var result=str.match(patt1);
+document.getElementById("demo4").innerHTML = result;
+}
+</script>
+
+<!-- not a particular character -->
+<button onclick="myFunc4()"> not a character</button>
+<p id="demo5"></p>
+<script>
+  function myFunc4(){
+var str = "Is this all there is?";
+var patt1 =/[^i]/g;
+var result=str.match(patt1);
+document.getElementById("demo5").innerHTML = result;
+}
+</script>
+
+<!-- global search for the numbers 1 to 4 in a string -->
+<button onclick="myFunc5()"> number</button>
+<p id="demo6"></p>
+<script>
+  function myFunc5(){
+var str = "123456789";
+var patt1 =/[1-5]/g;
+var result=str.match(patt1);
+document.getElementById("demo6").innerHTML = result;
+}
+</script>
+
+<!-- global search for numbers that are NOT 1 to 4 in a string -->
+<button onclick="myFunc6()"> not number</button>
+<p id="demo7"></p>
+<script>
+  function myFunc6(){
+var str = "123456789";
+var patt1 =/[^1-5]/g;
+var result=str.match(patt1);
+document.getElementById("demo7").innerHTML = result;
+}
+</script>
+
+<!-- global search for any of the specified alternatives  -->
+<button onclick="myFunc7()"> specified alternatives</button>
+<p id="demo8"></p>
+<script>
+  function myFunc7(){
+var str = "go green or die trying green gren red red blue grene green";
+var patt1 =/(red|green)/g;
+var result=str.match(patt1);
+document.getElementById("demo8").innerHTML = result;
+}
+</script>
+
+<!-- global search for "h.t" in a string. -->
+<button onclick="myFunc8()"> . metacharacter</button>
+<p id="demo9"></p>
+<script>
+  function myFunc8(){
+var str = "Thats hot hhet";
+var patt1 =/h.t/g;
+var result=str.match(patt1);
+document.getElementById("demo9").innerHTML = result;
+}
+</script>
+
+<!-- global search for word characters in a string. -->
+<button onclick="myFunc9()"> \w metacharacter</button>
+<p id="demo10"></p>
+<script>
+  function myFunc9(){
+var str = "Give 100%_";
+var patt1 =/\w/g;
+var result=str.match(patt1);
+document.getElementById("demo10").innerHTML = result;
+}
+</script>
+
+<!-- global search for non-word characters in a string. -->
+<button onclick="myFunc10()"> \W metacharacter</button>
+<p id="demo11"></p>
+<script>
+  function myFunc10(){
+var str = "Give  100%_";
+var patt1 =/\W/g;
+var result=str.match(patt1);
+document.getElementById("demo11").innerHTML = result;
+}
+</script>
+
+<!-- global search for digits in a string. -->
+<button onclick="myFunc11()"> \d metacharacter</button>
+<p id="demo12"></p>
+<script>
+  function myFunc11(){
+var str = "Give  100%_!";
+var patt1 =/\d/g;
+var result=str.match(patt1);
+document.getElementById("demo12").innerHTML = result;
+}
+</script>
+
+<!-- global search for non-digit characters in a string. -->
+<button onclick="myFunc12()"> \D metacharacter</button>
+<p id="demo13"></p>
+<script>
+  function myFunc12(){
+var str = "Give  100%_!";
+var patt1 =/\D/g;
+var result=str.match(patt1);
+document.getElementById("demo13").innerHTML = result;
+}
+</script>
+
+<!-- global search for non-digit characters in a string. -->
+<button onclick="myFunc12()"> \D metacharacter</button>
+<p id="demo13"></p>
+<script>
+  function myFunc12(){
+var str = "Give  100%_!";
+var patt1 =/\D/g;
+var result=str.match(patt1);
+document.getElementById("demo13").innerHTML = result;
+}
+</script>
+<!-- global search for "W3" at the beginning or end of a word in a string. -->
+<button onclick="myFunc13()"> \b metacharacter</button>
+<p id="demo14"></p>
+<script>
+  function myFunc13(){
+var str = "Visit W3schools";
+var patt1 =/\bVi/g;
+var result=str.match(patt1);
+document.getElementById("demo14").innerHTML = result;
+}
+</script>
+
+<!-- global search for "W3" not at the beginning or end of a word in a string. -->
+<button onclick="myFunc14()"> \B metacharacter</button>
+<p id="demo15"></p>
+<script>
+  function myFunc14(){
+var str = "Visit W3schools";
+var patt1 =/\Bschool/g;
+var result=str.match(patt1);
+document.getElementById("demo15").innerHTML = result;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
