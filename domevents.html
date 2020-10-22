@@ -1,0 +1,42 @@
+<html>
+<body>
+  <script>
+    var h=document.createElement("H1");
+    var t=document.createTextNode("Hello World");
+    h.append(t);
+    document.body.appendChild(h);
+</script>
+
+<ul id="ul1"><li id="l1">Coffee</li><li>Tea</li><li>Milk</li></ul>
+<button onclick="remove()">Remove</button>
+<script>
+function remove(){
+  var element=document.getElementById("ul1");
+  element.removeChild(element.childNodes[0]);
+
+}
+</script>
+
+
+
+<ul id="ul2"><li id="l2">Coffee</li><li>Tea</li></ul>
+<button onclick="append()">Append</button>
+<script>
+function append(){
+  var el=document.createElement("LI");
+  var t=document.createTextNode("Water");
+  el.appendChild(t);
+  document.getElementById("ul2").appendChild(el);
+
+}
+</script>
+
+
+</body>
+
+
+
+
+
+
+    </html>

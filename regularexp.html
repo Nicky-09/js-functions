@@ -120,7 +120,7 @@ document.getElementById("demo10").innerHTML = result;
 <p id="demo11"></p>
 <script>
   function myFunc10(){
-var str = "Give  100%_";
+var str = "Give  100%_!";
 var patt1 =/\W/g;
 var result=str.match(patt1);
 document.getElementById("demo11").innerHTML = result;
@@ -169,7 +169,7 @@ document.getElementById("demo13").innerHTML = result;
   function myFunc13(){
 var str = "Visit W3schools";
 var patt1 =/\bVi/g;
-var result=str.match(patt1);
+var result=str.search(patt1);
 document.getElementById("demo14").innerHTML = result;
 }
 </script>
@@ -181,7 +181,7 @@ document.getElementById("demo14").innerHTML = result;
   function myFunc14(){
 var str = "Visit W3schools";
 var patt1 =/\Bschool/g;
-var result=str.match(patt1);
+var result=str.search(patt1);
 document.getElementById("demo15").innerHTML = result;
 }
 </script>
